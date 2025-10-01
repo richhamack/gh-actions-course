@@ -5,15 +5,15 @@ on:
       - main
   workflow_dispatch:
 jobs:
-  - name: echo-hello
-    runs-on: ubuntu-latest
-    steps:
-      - name: Say hello
-        run: echo "Hello, World!"
-  - name: echo-goodbye
-    runs-on: ubuntu-latest
-    steps:
-      - name: failed steps
-        run: echo "i will fail" && exit 1
-      - name: Say goodbye
-        run: echo "Goodbye, World!"
+  name: echo-hello
+  runs-on: ubuntu-latest
+  steps:
+    - name: Say hello
+      run: echo "Hello, World!"
+  name: echo-goodbye
+  runs-on: ubuntu-latest
+  steps:
+    - name: failed steps
+      run: echo "i will fail" && exit 1
+    - name: Say goodbye
+      run: echo "Goodbye, World!"
